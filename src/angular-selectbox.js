@@ -115,7 +115,7 @@
        */
       function _getSelected() {
 
-        if (!vm.options.length) { return; }
+        if (!vm.options || !vm.options.length) { return; }
 
         if (vm.options[0][vm.idKey]) {
           for (var i = 0; i < vm.options.length; i += 1) {
