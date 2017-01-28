@@ -174,6 +174,13 @@
 
       }
 
+      $scope.$watch('vm.value', function (value) {
+        if(vm.options.length && vm.options[0][vm.idKey] && vm.selected[vm.idKey] != value) {
+            vm.selected = null;
+           _getSelected();
+        }
+      });
+
       /**
        * Handle click event on document in order to determine
        * if selectbox should be closed
