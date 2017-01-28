@@ -27,12 +27,12 @@
     "LICENSE"
   ],
   "dependencies": {
-    "angular": "^1.4.2"
+    "angular": "~1.5.11"
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.2"
+    "angular-mocks": "~1.5.11"
   },
   "resolutions": {
-    "angular": "^1.4.2"
+    "angular": "~1.5.11"
   }
 }

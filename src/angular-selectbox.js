@@ -168,18 +168,11 @@
 
         vm.value = value[vm.idKey] || value;
 
-        _getSelected();
-
         if (angular.isDefined(vm.onChange)) { vm.onChange({value: vm.value}); }
 
       }
 
-      $scope.$watch('vm.value', function (value) {
-        if(vm.options.length && vm.options[0][vm.idKey] && vm.selected[vm.idKey] != value) {
-            vm.selected = null;
-           _getSelected();
-        }
-      });
+      $scope.$watch('vm.value', _getSelected);
 
       /**
        * Handle click event on document in order to determine
